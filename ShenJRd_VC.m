@@ -741,6 +741,8 @@
         }
     }
     _selectBits  ^= (0x1<<tag);
+    
+    //通过比特位移位，取位操作完成记忆区块对应的肌肉enable状态获取---<<< 实时
     for (unsigned int i = 0; i < 22; i++) {
         if ((((_selectBits & (0x1<<i))) == (0x1<<i))) {
            
